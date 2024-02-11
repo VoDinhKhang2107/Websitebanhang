@@ -1,0 +1,58 @@
+﻿@model QLBH_2051010137_VoDinhKhang.Models.SanPham
+@using QLBH_2051010137_VoDinhKhang.Models
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xóa</h2>
+
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Sản Phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            Đơn Giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+        <dt>
+            Hình Ảnh
+        </dt>
+
+        <dd>
+            @Html.Image("../../" + Model.HinhAnh, "", "100")
+            @*@Html.DisplayFor(model => model.HinhAnh)*@
+        </dd>
+
+        <dt>
+            Loại Sản Phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiSanPham.TenLoaiSP)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Xóa" class="btn btn-danger" /> 
+    <span class="btn bg-primary">   @Html.ActionLink("Quay lại", "Index")</span>
+</div>
+    }
+</div>

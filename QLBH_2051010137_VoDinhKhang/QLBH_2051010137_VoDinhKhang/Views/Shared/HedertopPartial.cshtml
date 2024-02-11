@@ -1,0 +1,43 @@
+﻿@using QLBH_2051010137_VoDinhKhang.Models
+<div class="top-navbar  ">
+    <div class="social-icons">
+        <div class="icon">
+            @*<a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>*@
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </div>
+    <div class="TenLogo">
+        <h3> <a href=""> @Html.ActionLink("KUYN APPLE", "Index", "Home")</a></h3>
+    </div>
+    <div class="other-links">
+        <button id="btn-dangnhap">
+            <a href="~/Admin/HomeAdmin/DangNhap">Đăng nhập</a>
+
+        </button>
+        @*<button id="btn-dangky">
+            <a href="~/Admin/HomeAdmin/DangKy">Đăng ký</a>
+        </button>*@
+
+        <div class="d-inline shopping ">
+            <a class="btn btn-light " href="@Url.Action("Index","Giohang")">
+
+                Giỏ hàng
+              
+                @*@Html.ActionLink("Giỏ hàng", "Index", "Giohang")*@
+                @*Giỏ hàng: <span class="badge bg-success mt-0 align-self-start " id="total">0</span>*@
+            </a>
+          
+        </div>
+    </div>
+
+</div>

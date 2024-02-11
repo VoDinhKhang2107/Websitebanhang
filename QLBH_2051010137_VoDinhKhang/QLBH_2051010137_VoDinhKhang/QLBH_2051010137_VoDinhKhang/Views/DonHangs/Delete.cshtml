@@ -1,0 +1,58 @@
+﻿@model QLBH_2051010137_VoDinhKhang.Models.DonHang
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";}
+
+<h2>Xóa tài khoản</h2>
+
+<h3>Bạn có muốn xóa tài khoản này không?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+          
+            Ngày nhập:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayNhap)
+        </dd>
+
+        <dt>
+           Ngày giao:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayGiao)
+        </dd>
+
+        <dt>
+         Tên khách hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.TenKH)
+        </dd>
+
+        <dt>
+            Tên nhân viên:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien.TenNV)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+              <input type="submit" value="Xóa" class="btn btn-danger" /> 
+            <span class="bg-blue btn">@Html.ActionLink("Quay lại", "Index")</span> 
+        </div>
+    }
+</div>

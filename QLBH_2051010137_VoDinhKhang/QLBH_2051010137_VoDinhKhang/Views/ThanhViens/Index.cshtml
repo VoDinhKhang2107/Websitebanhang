@@ -1,0 +1,46 @@
+﻿@model IEnumerable<QLBH_2051010137_VoDinhKhang.Models.ThanhVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Danh mục tài khoản</h2>
+
+<p class="bg-blue btn">
+    @Html.ActionLink("Thêm tài khoản", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên tài khoản
+        </th>
+        <th>
+            Mật khẩu
+        </th>
+ 
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaiKhoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatKhau)
+            </td>
+
+            
+            <td>
+                <span class="btn btn-info bg-info"> @Html.ActionLink("Sửa", "Edit", new { id = item.MaThanhVien })</span>
+                <span class="btn btn-default bg-blue"> @Html.ActionLink("Xem chi tiết", "Details", new { id = item.MaThanhVien }) </span>
+                <span class="btn btn-info bg-danger"> @Html.ActionLink("Xóa", "Delete", new { id = item.MaThanhVien })</span>
+
+
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f5285ff86f85475b995d816ca52c6591" Name="Diagram1">
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.BinhLuan" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.DonHang" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.KhachHang" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.LoaiSanPham" Width="1.5" PointX="5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.LoaiThanhVien" Width="1.5" PointX="10" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.NhaCungCap" Width="1.5" PointX="12.875" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.NhanVien" Width="1.5" PointX="0.625" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.NhaSanXuat" Width="1.5" PointX="8.125" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.PhanQuyen" Width="1.5" PointX="11" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.SanPham" Width="1.5" PointX="2.875" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.sysdiagram" Width="1.5" PointX="9.875" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.ThanhVien" Width="1.5" PointX="7" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_BinhLuan_ThanhVien" ManuallyRouted="false" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_ChiTietHD_HoaDon" ManuallyRouted="false" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_ChiTietHD_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_HoaDon_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_SanPham_LoaiSanPham" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.PhanQuyen_ThanhVien" Width="1.5" PointX="9" PointY="2.875" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_PhanQuyen_ThanhVien_PhanQuyen" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_PhanQuyen_ThanhVien_ThanhVien" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_ThanhVien_PhanQuyen" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_ThanhVien_LoaiThanhVien" />
+        <EntityTypeShape EntityType="csdlBanDienThoaiModel.PhanQuyen_LoaiThanhVien" Width="1.5" PointX="12.875" PointY="0.5" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_PhanQuyen_LoaiThanhVien_LoaiThanhVien" />
+        <AssociationConnector Association="csdlBanDienThoaiModel.FK_PhanQuyen_LoaiThanhVien_PhanQuyen" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

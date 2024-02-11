@@ -1,0 +1,49 @@
+﻿@model IEnumerable<QLBH_2051010137_VoDinhKhang.Models.ChiTietDonHang>
+
+@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+}
+
+<h2 class="text-white text-center">Chi Tiết Đơn Hàng</h2>
+
+
+
+
+@foreach (var m in ViewBag.Main)
+{
+    <h3 class="text-white py-3" >Số đơn hàng: @m.DonHang.MaHD</h3>
+    <h3 class="text-white py-3">Tên khách hàng: @m.khachhang.TenKH</h3>
+}
+<table class="table table-striped">
+    <tr>
+        <th>Số TT</th>
+        <th>Tên Sản Phẩm</th>
+        <th>Số lượng</th>
+        <th>Đơn giá</th>
+        <th>Thành tiền</th>
+    </tr>
+    @{
+        double tongtien = 0;
+        int i = 0;
+    }
+    @foreach (var item in ViewBag.Sub)
+    {
+        i++;
+        tongtien += (Convert.ToDouble(@item.ctdh.SoLuong) * Convert.ToDouble(@item.ctdh.DonGiaBan));
+        <tr>
+            <td>@i</td>
+            <td>@item.sanpham.TenSP</td>
+            <td>@item.ctdh.SoLuong</td>
+            <td>@String.Format("{0:0,##0}", item.ctdh.DonGiaBan)</td>
+            <td>@String.Format("{0:0,##0}", item.Thanhtien)</td>
+        </tr>
+    }
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Tổng tiền:</th>
+        <th><text>@String.Format("{0:0,##0}", tongtien)</text></th>
+    </tr>
+</table>
+

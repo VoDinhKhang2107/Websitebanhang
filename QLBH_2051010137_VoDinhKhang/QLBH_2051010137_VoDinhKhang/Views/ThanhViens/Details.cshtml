@@ -1,0 +1,108 @@
+﻿@model QLBH_2051010137_VoDinhKhang.Models.ThanhVien
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chi tiết tài khoản</h2>
+
+<div>
+ 
+    <hr />
+    <dl class="dl-horizontal text-left w-25">
+        <dt>
+            Tên tài khoản:
+        </dt>
+
+        <dd class="">
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.TaiKhoan)
+            </span>
+
+        </dd>
+
+        <dt>
+            Mật khẩu:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.MatKhau)
+            </span>
+
+        </dd>
+
+        <dt>
+            Họ và tên:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.HoVaTen)
+            </span>
+
+        </dd>
+
+
+        <dt>
+
+            Địa chỉ:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.DiaChi)
+            </span>
+
+        </dd>
+
+        <dt>
+            Email:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.Email)
+            </span>
+
+        </dd>
+
+        <dt>
+            Số điện thoại:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.SoDienThoai)
+            </span>
+        </dd>
+
+        <dt>
+            Mã loại thành viên:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.MaLoaiTV)
+            </span>
+        </dd>
+
+        <dt>
+            Tên quyền:
+        </dt>
+
+        <dd>
+
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.PhanQuyen.TenQuyen)
+            </span>
+
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <span class="btn btn-primary bg-info">@Html.ActionLink("Sửa", "Edit", new { id = Model.MaThanhVien })</span>  
+    <span  class="btn bg-primary">   @Html.ActionLink("Quay lại", "Index")</span>
+</p>

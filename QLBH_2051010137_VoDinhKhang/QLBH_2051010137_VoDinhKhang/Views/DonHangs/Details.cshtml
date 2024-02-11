@@ -1,0 +1,52 @@
+﻿@model QLBH_2051010137_VoDinhKhang.Models.DonHang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";}
+
+<h2>Chi tiết đơn hàng</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+
+            Ngày nhập:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayNhap)
+        </dd>
+
+        <dt>
+            Ngày giao:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayGiao)
+        </dd>
+
+        <dt>
+            Tên khách hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.TenKH)
+        </dd>
+
+        <dt>
+            Tên nhân viên:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien.TenNV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <span class="btn btn-primary bg-info">@Html.ActionLink("Sửa", "Edit", new { id = Model.MaHD })</span>
+    <span class="btn bg-primary">   @Html.ActionLink("Quay lại", "Index")</span>
+   
+</p>

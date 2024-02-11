@@ -1,0 +1,60 @@
+﻿@model IEnumerable<QLBH_2051010137_VoDinhKhang.Models.DonHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";}
+
+<h2 class="text-center">Đơn Hàng</h2>
+
+<p class="btn bg-blue">
+    @Html.ActionLink("Thêm đơn hàng ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Mã Đơn Hàng
+        </th>
+        <th>
+            Ngày Nhập
+        </th>
+        <th>
+            Ngày Giao
+        </th>
+        <th>
+            Tên Khách Hàng
+        </th>
+        <th>
+            Nhân Viên Bán Hàng
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href="@Url.Action("Index", "ChiTietDonHangs", new {MaHD = item.MaHD })">
+                @Html.DisplayFor(modelItem => item.MaHD)
+            </a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayNhap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayGiao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhachHang.TenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVien.TenNV)
+        </td>
+        <td>
+            <span class="btn btn-info bg-info"> @Html.ActionLink("Sửa", "Edit", new { id = item.MaHD })</span>
+            <span class="btn btn-default bg-blue"> @Html.ActionLink("Xem chi tiết", "Details", new { id = item.MaHD }) </span>
+            <span class="btn btn-info bg-danger"> @Html.ActionLink("Xóa", "Delete", new { id = item.MaHD })</span>
+   
+        </td>
+    </tr>
+}
+
+</table>

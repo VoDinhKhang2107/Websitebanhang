@@ -1,0 +1,90 @@
+﻿@model QLBH_2051010137_VoDinhKhang.Models.ThanhVien
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xóa tài khoản</h2>
+
+<h3>Bạn có muốn xóa tài khoản này không?</h3>
+<div>
+ 
+    <hr />
+    <dl class="dl-horizontal form-horizontal text-left w-25 ">
+        <dt>
+            Tên tài khoản:
+        </dt>
+
+        <dd class="">
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.TaiKhoan)
+            </span>
+           
+        </dd>
+
+        <dt>
+            Mật khẩu:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.MatKhau)
+            </span>
+           
+        </dd>
+
+        <dt>
+            Họ và tên:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.HoVaTen)
+            </span>
+         
+        </dd>
+
+        <dt>
+            Số điện thoại:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.SoDienThoai)
+            </span>
+        </dd>
+
+        <dt>
+            Mã loại thành viên:
+        </dt>
+
+        <dd>
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.MaLoaiTV)
+            </span>
+        </dd>
+
+        <dt>
+            Tên quyền:
+        </dt>
+
+        <dd>
+
+            <span class="input-group-text">
+                @Html.DisplayFor(model => model.PhanQuyen.TenQuyen)
+            </span>
+          
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> 
+            <span class="bg-blue btn">@Html.ActionLink("Quay lại", "Index")</span> 
+        </div>
+    }
+</div>
